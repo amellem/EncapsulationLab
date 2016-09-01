@@ -23,9 +23,11 @@ public class Startup {
         employee.lastName = "Piper";
         employee.ssn = "333-1234";
         
-        employee.meetDepartmentStaff();
+        
         employee.meetWithHrForBenefitAndSalryInfo();
+        employee.meetDepartmentStaff(); 
         employee.reviewDeptPolicies();
+        employee.moveIntoCubicle("L111");
 
         System.out.println("The employee's status is: " + employee.getStatus());
     }
