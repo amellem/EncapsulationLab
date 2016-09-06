@@ -12,21 +12,29 @@ import java.util.Date;
  * @version     1.01
  */
 public class Employee {
-    String firstName;
-    String lastName;
-    public String ssn;
-    public Date birthDate;
-    boolean metWithHr;
-    boolean metDeptStaff;
-    boolean reviewedDeptPolicies;
-    boolean movedIn;
-    String cubeId;
-    Date currentDate;
+    // Keep variables private whenever possible
+    private String firstName;
+    private String lastName;
+    private String ssn;
+    private Date birthDate;
+    private boolean metWithHr;
+    private boolean metDeptStaff;
+    private boolean reviewedDeptPolicies;
+    private boolean movedIn;
+    private String cubeId;
+    private Date currentDate;
 
     public Employee() {
         currentDate = new Date();
     }
 
+    public void completeEmployeeOrientation(String cubeId){
+        meetWithHrForBenefitAndSalryInfo();
+        meetDepartmentStaff();
+        reviewDeptPolicies();
+        moveIntoCubicle(cubeId);
+    }
+    
     // Assume this must be performed first
     public void meetWithHrForBenefitAndSalryInfo() {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("M/d/yyyy");
@@ -90,4 +98,108 @@ public class Employee {
             return formatDate + ": Orientation in progress...";
         }
     }
+
+    
+    
+    public String getFirstName() {
+        //needs validation
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        //needs validation
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        //needs validation
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        //needs validation
+        this.lastName = lastName;
+    }
+
+    public String getSsn() {
+        //needs validation
+        return ssn;
+    }
+
+    public void setSsn(String ssn) {
+        //needs validation
+        this.ssn = ssn;
+    }
+
+    public Date getBirthDate() {
+        //needs validation
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        //needs validation
+        this.birthDate = birthDate;
+    }
+
+    public boolean isMetWithHr() {
+        //needs validation
+        return metWithHr;
+    }
+
+    public void setMetWithHr(boolean metWithHr) {
+        //needs validation
+        this.metWithHr = metWithHr;
+    }
+
+    public boolean isMetDeptStaff() {
+        //needs validation
+        return metDeptStaff;
+    }
+
+    public void setMetDeptStaff(boolean metDeptStaff) {
+        //needs validation
+        this.metDeptStaff = metDeptStaff;
+    }
+
+    public boolean isReviewedDeptPolicies() {
+        //needs validation
+        return reviewedDeptPolicies;
+    }
+
+    public void setReviewedDeptPolicies(boolean reviewedDeptPolicies) {
+        //needs validation
+        this.reviewedDeptPolicies = reviewedDeptPolicies;
+    }
+
+    public boolean isMovedIn() {
+        //needs validation
+        return movedIn;
+    }
+
+    public void setMovedIn(boolean movedIn) {
+        //needs validation
+        this.movedIn = movedIn;
+    }
+
+    public String getCubeId() {
+        //needs validation
+        return cubeId;
+    }
+
+    public void setCubeId(String cubeId) {
+        //needs validation
+        this.cubeId = cubeId;
+    }
+
+    public Date getCurrentDate() {
+        //needs validation
+        return currentDate;
+    }
+
+    public void setCurrentDate(Date currentDate) {
+        //needs validation
+        this.currentDate = currentDate;
+    }
+    
+    
 }
